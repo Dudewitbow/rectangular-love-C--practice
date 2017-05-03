@@ -67,7 +67,7 @@ void calculateIntersection(rectangle a, rectangle b) {
 		else if(b.bottomY <= aTopY && a.bottomY <= b.bottomY){
 			//top is not in bound but bottom is, generate C
 			c.bottomY = b.bottomY;
-			c.height = b.height;
+			c.height = aTopY - b.bottomY + 1;
 			if(bRightX < aRightX){
 				c.width = bRightX - c.leftX + 1;
 			}
