@@ -8,11 +8,35 @@ void calculateIntersection(rectangle a, rectangle b);
 
 int main() {
 	srand(time(0));
-	for(int i = 0; i < 3; i++){
-		rectangle one;
-		rectangle two;
-		calculateIntersection(one,two);
-	}
+	//for(int i = 0; i < 3; i++){
+	//	rectangle one;
+	//	rectangle two;
+	//	calculateIntersection(one,two);
+	//}
+  
+  cout << "------------------ test one\n\n";
+	rectangle a(3,4,2,3);
+	rectangle b(1,2,3,4);
+	calculateIntersection(a,b);
+	calculateIntersection(b,a);
+
+  cout << "------------------ test two\n\n";
+	rectangle c(0,0,3,4);
+	rectangle d(2,-2,2,4);
+	calculateIntersection(c,d);
+	calculateIntersection(d,c);
+
+  cout << "------------------ test three\n\n";
+	rectangle e(1,1,3,1);
+	rectangle f(1,4,3,1);
+	calculateIntersection(e,f);
+	calculateIntersection(f,e);
+
+  cout << "------------------ test four\n\n";
+	rectangle g(1,2,2,2);
+	rectangle h(5,2,2,2);
+	calculateIntersection(g,h);
+	calculateIntersection(h,g);
 	return 0;
 }
 
